@@ -1,53 +1,47 @@
-
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'antd';
 
 const contentStyle = {
   height: '360px',
+  width: '60%',
   color: '#f5dabc', 
   lineHeight: '260px',
   textAlign: 'center',
   background: '#263624',
+  margin: 'auto',
+  
 };
 
-// const handleClick = {environment}
-
-// const App = () => (
-//   <Carousel autoplay>
-//     <div>
-//       <h2 style={contentStyle} onClick={() => handleClick('/land')}>
-//       Land Dinosaurs</h2>
-//     </div>
-//     <div>
-//       <h2 style={contentStyle} onClick={() => handleClick('/air')}>Air Dinosaurs</h2>
-//     </div>
-//     <div>
-//       <h2 style={contentStyle} onClick={() => handleClick('/sea')}>Sea Dinosaurs</h2>
-//     </div>
-//     {/* <div>
-//       <h3 style={contentStyle}>4</h3>
-//     </div> */}
-//   </Carousel>
-// );
-
-// export default App;
+const App = () => {
+   const nav = useNavigate()
+return (
+  <Carousel autoplay>
+    <div className='carousel-container' onClick={() => { nav('/land') }}>
+      <h2 style={contentStyle}>
+      <img src={process.env.PUBLIC_URL + "/trex.jpg"} alt="TRex pic" />
+       Land Dinosaurs</h2>
+     </div>
+     <div className='carousel-container' onClick={() => { nav('/air') }}>
+       <h2 style={contentStyle}>Air Dinos</h2>
+     </div>
+     <div className='carousel-container' onClick={() => { nav('/sea') }}>
+       <h2 style={contentStyle}>Sea Dinos</h2>
+     </div>
+   </Carousel>
+)
+};
+ export default App;
 
 
+// export default function Home() {
+//    const nav = useNavigate()
+//    return (
+//       <section>
+//          <button onClick={() => { nav('/land') }}>Land Dinos</button>
+//          <button onClick={() => { nav('/sea') }}>Sea Dinos</button>
+//          <button onClick={() => { nav('/air') }}>Air Dinos</button>
+//       </section>
 
- export default function Home() {
-   return (
-
-    <section>
-    <a href="http://localhost:3000/land" target="_blank">
-  <button>Land Dinos</button>
-  </a>
-    <a href="http://localhost:3000/sea" target="_blank">
-  <button>Sea Dinos</button>
-  </a>
-    <a href="http://localhost:3000/air" target="_blank">
-  <button>Air Dinos</button>
-</a>
-</section>
-
-   )
-} 
+//    )
+// } 
