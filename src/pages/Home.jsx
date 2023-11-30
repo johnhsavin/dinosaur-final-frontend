@@ -1,5 +1,39 @@
+import React from 'react';
+import { Carousel } from 'antd';
 
-export default function Home() {
+const contentStyle = {
+  height: '360px',
+  color: '#f5dabc', 
+  lineHeight: '260px',
+  textAlign: 'center',
+  background: '#263624',
+};
+
+// const handleClick = {environment}
+
+// const App = () => (
+//   <Carousel autoplay>
+//     <div>
+//       <h2 style={contentStyle} onClick={() => handleClick('/land')}>
+//       Land Dinosaurs</h2>
+//     </div>
+//     <div>
+//       <h2 style={contentStyle} onClick={() => handleClick('/air')}>Air Dinosaurs</h2>
+//     </div>
+//     <div>
+//       <h2 style={contentStyle} onClick={() => handleClick('/sea')}>Sea Dinosaurs</h2>
+//     </div>
+//     {/* <div>
+//       <h3 style={contentStyle}>4</h3>
+//     </div> */}
+//   </Carousel>
+// );
+
+// export default App;
+
+
+
+ export default function Home() {
    return (
 
     <section>
@@ -15,4 +49,4 @@ export default function Home() {
 </section>
 
    )
-}
+} 
