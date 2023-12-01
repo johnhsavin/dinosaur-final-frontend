@@ -24,11 +24,11 @@ return (
      </div>
      <div className='carousel-container' onClick={() => { nav('/air') }}>
        <h2 style={contentStyle}>Air Dinos</h2>
-       <img src={process.env.PUBLIC_URL + "/pterodactyl.png"} alt="air dinosaur pic" />
+       <img src={process.env.PUBLIC_URL + "/public/pterodactyl.png"} alt="air dinosaur pic" />
      </div>
      <div className='carousel-container' onClick={() => { nav('/sea') }}>
        <h2 style={contentStyle}>Sea Dinos</h2>
-       <img src={process.env.PUBLIC_URL + "/mosaurus.png"} alt="sea dinosaur pic" />
+       <img src={process.env.PUBLIC_URL + "/public/mosaurus.png"} alt="sea dinosaur pic" />
      </div>
    </Carousel>
 )
