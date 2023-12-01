@@ -1,11 +1,3 @@
-// export default function AddDinosaurs() {
-//   return (
-//     <>
-    
-//     </>
-//   )
-// }
-
 import React, { useState } from 'react';
 import { Button, Form, Input, Modal, Radio } from 'antd';
 
@@ -23,11 +15,12 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
         form
           .validateFields()
           .then((values) => {
+            // post
             form.resetFields();
             onCreate(values);
           })
           .catch((info) => {
-            console.log('Validate Failed:', info);
+            console.log('Unsuccessful dig:', info);
           });
       }}
     >
@@ -65,7 +58,8 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
     </Modal>
   );
 };
-const App = () => {
+
+const AddDinosaurs = () => {
   const [open, setOpen] = useState(false);
   const onCreate = (values) => {
     console.log('Received values of form: ', values);
@@ -79,7 +73,7 @@ const App = () => {
           setOpen(true);
         }}
       >
-        New Collection
+        New Discovery from add dinos
       </Button>
       <CollectionCreateForm
         open={open}
@@ -91,4 +85,4 @@ const App = () => {
     </div>
   );
 };
-export default App;
+export default AddDinosaurs;
