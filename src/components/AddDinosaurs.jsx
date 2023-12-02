@@ -11,7 +11,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
     const description = e.target.description.value;
     const newDinosaur = { name, environment, description };
 
-    console.log(newDinosaur)
+    // console.log(newDinosaur)
 
     fetch(`${process.env.REACT_APP_API_URL}/dinosaurs/${environment}`, {
       method: 'POST',
@@ -46,7 +46,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
       }}
     >
       <Form
-      onSubmit={handleFormSubmit}
+        // onSubmit={handleFormSubmit}
         form={form}
         layout="vertical"
         name="form_in_modal"
@@ -60,20 +60,22 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
           rules={[
             {
               required: true,
-              message: 'Please input the namde of the dinosaur!',
+              message: 'Please enter the dinosaur name!',
             },
           ]}
         >
           <Input />
         </Form.Item>
+
         <Form.Item name="description" label="Description">
-          <Input type="textarea" />
+          <Input.TextArea />
         </Form.Item>
+
         <Form.Item name="modifier" className="collection-create-form_last-form-item">
           <Radio.Group>
-            <Radio value="land">Land</Radio>
-            <Radio value="sea">Sea</Radio>
-            <Radio value="air">Air</Radio>
+            <Radio.Button value="land">Land</Radio.Button>
+            <Radio.Button value="sea">Sea</Radio.Button>
+            <Radio.Button value="air">Air</Radio.Button>
           </Radio.Group>
         </Form.Item>
       </Form>
