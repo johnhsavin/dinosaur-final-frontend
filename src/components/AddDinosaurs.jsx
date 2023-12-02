@@ -4,6 +4,27 @@ import { Button, Form, Input, Modal, Radio } from 'antd';
 const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
   const [form] = Form.useForm();
 
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const environment = e.target.environment.value;
+    const description = e.target.description.value;
+    const newDinosaur = { name, environment, description };
+
+    console.log(newDinosaur)
+
+    fetch(`${process.env.REACT_APP_API_URL}/dinosaurs/${environment}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newDinosaur),
+    })
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(err => console.error(err));
+  };
+
   return (
     <Modal
       open={open}
@@ -25,6 +46,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
       }}
     >
       <Form
+      onSubmit={handleFormSubmit}
         form={form}
         layout="vertical"
         name="form_in_modal"
@@ -49,9 +71,9 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
         </Form.Item>
         <Form.Item name="modifier" className="collection-create-form_last-form-item">
           <Radio.Group>
-            <Radio value="Land">Land</Radio>
-            <Radio value="Sea">Sea</Radio>
-            <Radio value="Air">Air</Radio>
+            <Radio value="land">Land</Radio>
+            <Radio value="sea">Sea</Radio>
+            <Radio value="air">Air</Radio>
           </Radio.Group>
         </Form.Item>
       </Form>
@@ -59,12 +81,13 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
   );
 };
 
-const AddDinosaurs = () => {
+export default function AddDinosaurs() {
   const [open, setOpen] = useState(false);
   const onCreate = (values) => {
     console.log('Received values of form: ', values);
     setOpen(false);
   };
+
   return (
     <div>
       <Button
@@ -73,7 +96,7 @@ const AddDinosaurs = () => {
           setOpen(true);
         }}
       >
-        New Discovery from add dinos
+        New Dinosaur Discovery
       </Button>
       <CollectionCreateForm
         open={open}
@@ -85,4 +108,3 @@ const AddDinosaurs = () => {
     </div>
   );
 };
-export default AddDinosaurs;
