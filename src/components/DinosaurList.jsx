@@ -1,6 +1,5 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Button, Form, Input, Modal, Radio } from 'antd';
 import AddDinosaurs from './AddDinosaurs';
 
 export default function DinosaurList({ environment }) {
