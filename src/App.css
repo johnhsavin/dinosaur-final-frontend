@@ -12,12 +12,17 @@ p {
   text-align: center;
 }
 
-.carousel-container img {
+section {
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* .carousel-container img {
   border: 10px solid rgb(8, 66, 8);
   width: 100%;
   height: 95%
   
-}
+} */
   
 footer {
   display: flex;

@@ -8,7 +8,7 @@ const imgStyle = {
   display: 'block',
   width: 273,
 };
-const App = () => {
+export default function DinosaurCards() {
   <Card
     hoverable
     style={cardStyle}
@@ -41,4 +41,3 @@ const App = () => {
     </Flex>
   </Card>
 };
-export default App;

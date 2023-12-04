@@ -46,7 +46,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
       }}
     >
       <Form
-        // onSubmit={handleFormSubmit}
+        onSubmit={handleFormSubmit}
         form={form}
         layout="vertical"
         name="form_in_modal"
