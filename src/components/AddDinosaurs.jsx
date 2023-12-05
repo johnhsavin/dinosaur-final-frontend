@@ -24,7 +24,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
           });
       }}
     >
-      <Form
+      <Form className='add-dinosaur-form'
         form={form}
         layout="vertical"
         name="form_in_modal"
@@ -33,7 +33,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
         }}
       >
         <Form.Item
-          name="title"
+          name="name"
           label="Dinosaur Name"
           rules={[
             {
@@ -44,21 +44,25 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
         >
           <Input />
         </Form.Item>
-        <Form.Item>
-          <Radio.Group className='environment-type'>
+
+        <Form.Item label="Habitat">
+          <Radio.Group name='environment' className='environment-type'>
             <Radio.Button value="land">Land</Radio.Button>
             <Radio.Button value="sea">Sea</Radio.Button>
             <Radio.Button value="air">Air</Radio.Button>
           </Radio.Group>
-          <br/>
-          {/* <Radio.Group className='diet-type'>
+          </Form.Item>
+
+          <Form.Item label="Diet">
+          <Radio.Group name='diet' className='diet-type'>
             <Radio value="carnivore">Carnivore</Radio>
             <Radio value="herbivore">Herbivore</Radio>
             <Radio value="omnivore">Omnivore</Radio>
-          </Radio.Group> */}
+          </Radio.Group> 
         </Form.Item>
+
         <Form.Item name="description" label="Description">
-          <Input.TextArea />
+          <Input.TextArea placeholder='A brief description of your dinosaur!' />
         </Form.Item>
       </Form>
     </Modal>

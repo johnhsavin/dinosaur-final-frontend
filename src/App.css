@@ -1,8 +1,12 @@
 header {
-  margin: 10px;
-  border: 5px solid green;
+  
+  margin: 25px 40px;
+  width: 80%;
+  height: 200px;
+  border: 5px solid rgb(5, 78, 5);
   justify-content: center;
-}
+  text-align: center;
+};
 
 h1 {
   text-align: center;
@@ -15,15 +19,13 @@ p {
 section {
   display: flex;
   box-sizing: border-box;
-}
+};
+  
+.add-dinosaur-form {
+background-color: rgb(5, 78, 5);
 
-/* .carousel-container img {
-  border: 10px solid rgb(8, 66, 8);
-  width: 100%;
-  height: 95%
-  
-} */
-  
+};
+
 footer {
   display: flex;
   justify-content: center;
