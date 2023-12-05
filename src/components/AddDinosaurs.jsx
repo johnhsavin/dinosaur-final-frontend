@@ -45,7 +45,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
           <Input />
         </Form.Item>
 
-        <Form.Item label="Habitat">
+        <Form.Item label="Environment" name='environment'>
           <Radio.Group name='environment' className='environment-type'>
             <Radio.Button value="land">Land</Radio.Button>
             <Radio.Button value="sea">Sea</Radio.Button>
@@ -53,7 +53,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
           </Radio.Group>
           </Form.Item>
 
-          <Form.Item label="Diet">
+          <Form.Item label="Diet" name='diet'>
           <Radio.Group name='diet' className='diet-type'>
             <Radio value="carnivore">Carnivore</Radio>
             <Radio value="herbivore">Herbivore</Radio>
@@ -87,7 +87,7 @@ export default function AddDinosaurs() {
       .catch(err => console.error(err));
 
     setOpen(false);
-    window.location.reload()
+    // window.location.reload()
   };
 
   return (

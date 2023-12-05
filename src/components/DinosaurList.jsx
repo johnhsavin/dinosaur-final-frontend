@@ -30,7 +30,6 @@ export default function DinosaurList({ environment }) {
     <>
       <h1>{environment} Dinosaur Dig Site</h1>
       <AddDinosaurs />
-      <DinosaurCards />
       {dinosaurs && dinosaurs.map((dinosaur) =>
         <Card
           hoverable
@@ -39,7 +38,7 @@ export default function DinosaurList({ environment }) {
           }}
           cover={<img alt="dinosaurs" src="https://blog-app-jhs.s3.amazonaws.com/trex2.jpg" />}
         >
-          <Meta name={dinosaur.name} description={dinosaur.description} />
+          <Meta title={dinosaur.name} description={dinosaur.description} />
         </Card>
 
       )};   
