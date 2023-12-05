@@ -1,16 +1,18 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Card, Flex, Typography } from 'antd';
+// import { Card, Flex, Typography } from 'antd';
+import { Card } from 'antd';
 import AddDinosaurs from './AddDinosaurs';
 import DinosaurCards from './DinosaurCards';
 
-const cardStyle = {
-  width: 620,
-};
-const imgStyle = {
-  display: 'block',
-  width: 273,
-};
+// const cardStyle = {
+//   width: 620,
+// };
+// const imgStyle = {
+//   display: 'block',
+//   width: 375,
+// };
+const { Meta } = Card;
 
 export default function DinosaurList({ environment }) {
 
@@ -27,60 +29,20 @@ export default function DinosaurList({ environment }) {
   return (
     <>
       <h1>{environment} Dinosaur Dig Site</h1>
-      <DinosaurCards />
       <AddDinosaurs />
+      <DinosaurCards />
       {dinosaurs && dinosaurs.map((dinosaur) =>
         <Card
           hoverable
-          style={cardStyle}
-          bodyStyle={{
-            padding: 0,
-            overflow: 'hidden',
+          style={{
+            width: 400,
           }}
+          cover={<img alt="dinosaurs" src="https://blog-app-jhs.s3.amazonaws.com/trex2.jpg" />}
         >
-          <Flex justify="space-between">
-            <img
-              alt="dinosaur"
-              src='/trex.jpg'
-              style={imgStyle}
-            />
-            <Flex
-              vertical
-              align="flex-end"
-              justify="space-between"
-              style={{
-                padding: 32,
-              }}
-            >
-              <Typography.Title level={3}>
-                {dinosaur.title}
-              </Typography.Title>
-              <Typography.Paragraph>
-                {dinosaur.description}
-              </Typography.Paragraph>
-
-            </Flex>
-          </Flex>
+          <Meta name={dinosaur.name} description={dinosaur.description} />
         </Card>
-      )}
-    </>
+
+      )};   
+   </>
   )
-}
-// {/* <button
-//   type="primary"
-//   onClick={() => {
-//     setOpen(true);
-//   }}
-// >
-//   New Dinosaur Discovery
-// </button>
-// <CollectionCreateForm
-//   open={open}
-//   onCreate={onCreate}
-//   onCancel={() => {
-//     setOpen(false);
-//   }}
-// /> */}
-
-
-
+} 
