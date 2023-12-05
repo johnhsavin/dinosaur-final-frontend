@@ -44,17 +44,22 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
         >
           <Input />
         </Form.Item>
-        <Form.Item name="environment" className="radio-buttons">
-          <Radio.Group>
+        <Form.Item>
+          <Radio.Group className='environment-type'>
             <Radio.Button value="land">Land</Radio.Button>
             <Radio.Button value="sea">Sea</Radio.Button>
             <Radio.Button value="air">Air</Radio.Button>
           </Radio.Group>
+          <br/>
+          {/* <Radio.Group className='diet-type'>
+            <Radio value="carnivore">Carnivore</Radio>
+            <Radio value="herbivore">Herbivore</Radio>
+            <Radio value="omnivore">Omnivore</Radio>
+          </Radio.Group> */}
         </Form.Item>
         <Form.Item name="description" label="Description">
           <Input.TextArea />
         </Form.Item>
-
       </Form>
     </Modal>
   );
