@@ -1,9 +1,11 @@
 export default function Footer() {
   return (
     <footer>
-<small>
-  The Dino Hunters | Copyright © 2023
-</small>
+      <small>
+        <p>
+          &copy; {new Date().getFullYear()} The Dino Hunters. All rights reserved.
+        </p>
+      </small>
 
     </footer>
 

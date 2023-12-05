@@ -1,8 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { Card, Flex, Typography } from 'antd';
 import AddDinosaurs from './AddDinosaurs';
 import DinosaurCards from './DinosaurCards';
-import { Card, Flex, Typography } from 'antd';
 
 const cardStyle = {
   width: 620,
