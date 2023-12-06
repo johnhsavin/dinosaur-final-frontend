@@ -5,7 +5,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
   const [form] = Form.useForm();
 
   return (
-    <Modal
+    <Modal className='.add-dinosaur-modal'
       open={open}
       title="Add a new dinosaur"
       okText="New Discovery"

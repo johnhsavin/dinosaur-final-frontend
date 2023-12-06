@@ -1,5 +1,5 @@
 header {
-  margin: 10px;
+  margin: 20px;
   border: 5px solid #6d8455;
   font-size: 50px;
   font-family: fantasy;
@@ -9,20 +9,21 @@ header {
   text-align: center;
 };
 
-.main{
+.home-pics {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content:space-between;
   border: 5px solid #5B5E42;
   background-color: #373715;
 };
 
-  button {
-   align-items: self-end;
-  }
- 
+.home-pics div {
+  margin: 10px;
+}
 
+.add-dinosaur-modal {
+  background-color: #34431c !important;
+;}
 
 footer {
   display: flex;

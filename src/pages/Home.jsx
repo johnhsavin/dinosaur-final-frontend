@@ -6,8 +6,8 @@ import { Image } from 'antd';
 export default function Home() {
   const nav = useNavigate()
   return (
-    
-      <main>
+    <body>
+      <section className='home-pics'>
         <div onClick={() => { nav('/land') }}>
           <Image
             width={500}
@@ -25,8 +25,9 @@ export default function Home() {
             width={500}
             src="/pterodactyl.png" alt="a pic of an air carnivore" />
         </div>
-      </main>
-   
+      </section>
+    </body>
+
 
   )
 }
