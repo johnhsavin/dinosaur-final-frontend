@@ -60,6 +60,18 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
             <Radio.Button value="omnivore">Omnivore</Radio.Button>
           </Radio.Group>
         </Form.Item>
+        <Form.Item
+          name="imageUrl"
+          label="Add Image Url"
+          rules={[
+            {
+              required: true,
+              message: 'Please enter the dinosaur picture!',
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
 
         <Form.Item name="description" label="Description">
           <Input.TextArea placeholder='A brief description of your dinosaur!' />

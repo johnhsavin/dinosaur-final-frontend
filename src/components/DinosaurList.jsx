@@ -6,6 +6,12 @@ import AddDinosaurs from './AddDinosaurs';
 
 const { Meta } = Card;
 
+const dinoEnvironments = {
+  land: 'Land',
+  sea: 'Sea',
+  air: 'Air'
+}
+
 export default function DinosaurList({ environment }) {
 
   const [dinosaurs, setDinosaurs] = useState()
@@ -21,7 +27,7 @@ console.log(dinosaurs)
   return (
     <section>
     
-      <h1>{environment} Dinosaur Dig Site</h1>
+      <h1>{dinoEnvironments[environment]} Dinosaur Dig Site</h1>
       <AddDinosaurs />
       {dinosaurs && dinosaurs.map((dinosaur) =>
         <Card
@@ -29,7 +35,7 @@ console.log(dinosaurs)
           style={{
             width: 400,
           }}
-          cover={<img alt="dinosaurs" src="https://blog-app-jhs.s3.amazonaws.com/trex2.jpg" />}
+          cover={<img alt="dinosaurs" src={dinosaur.imageUrl}/>}
         >
           <Meta title={dinosaur.name} description={dinosaur.description} />
         </Card>
