@@ -18,6 +18,13 @@ section {
   box-sizing: border-box;
 };
   
+.Card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+};
+
 .add-dinosaur-form {
 background-color: rgb(5, 78, 5);
 

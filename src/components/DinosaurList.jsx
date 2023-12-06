@@ -1,17 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-// import { Card, Flex, Typography } from 'antd';
 import { Card } from 'antd';
 import AddDinosaurs from './AddDinosaurs';
-import DinosaurCards from './DinosaurCards';
 
-// const cardStyle = {
-//   width: 620,
-// };
-// const imgStyle = {
-//   display: 'block',
-//   width: 375,
-// };
 const { Meta } = Card;
 
 export default function DinosaurList({ environment }) {
