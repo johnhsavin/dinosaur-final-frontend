@@ -51,14 +51,14 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
             <Radio.Button value="sea">Sea</Radio.Button>
             <Radio.Button value="air">Air</Radio.Button>
           </Radio.Group>
-          </Form.Item>
+        </Form.Item>
 
-          <Form.Item label="Diet" name='diet'>
+        <Form.Item label="Diet" name='diet'>
           <Radio.Group name='diet' className='diet-type'>
-            <Radio value="carnivore">Carnivore</Radio>
-            <Radio value="herbivore">Herbivore</Radio>
-            <Radio value="omnivore">Omnivore</Radio>
-          </Radio.Group> 
+            <Radio.Button value="carnivore">Carnivore</Radio.Button>
+            <Radio.Button value="herbivore">Herbivore</Radio.Button>
+            <Radio.Button value="omnivore">Omnivore</Radio.Button>
+          </Radio.Group>
         </Form.Item>
 
         <Form.Item name="description" label="Description">

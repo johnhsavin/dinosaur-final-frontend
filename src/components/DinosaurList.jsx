@@ -3,13 +3,14 @@ import { useEffect, useState } from 'react';
 import { Card } from 'antd';
 import AddDinosaurs from './AddDinosaurs';
 
+
 const { Meta } = Card;
 
 export default function DinosaurList({ environment }) {
 
   const [dinosaurs, setDinosaurs] = useState()
   const [open, setOpen] = useState(false);
-
+console.log(dinosaurs)
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/dinosaurs/${environment}`)
       .then((res) => res.json())
@@ -18,7 +19,8 @@ export default function DinosaurList({ environment }) {
   }, [environment, open])
 
   return (
-    <>
+    <section>
+    
       <h1>{environment} Dinosaur Dig Site</h1>
       <AddDinosaurs />
       {dinosaurs && dinosaurs.map((dinosaur) =>
@@ -33,6 +35,6 @@ export default function DinosaurList({ environment }) {
         </Card>
 
       )};   
-   </>
+   </section>
   )
 } 
