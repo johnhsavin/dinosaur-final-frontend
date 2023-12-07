@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card } from 'antd';
+
 const { Meta } = Card;
-export default function DinosaurCards({dinosaur}) {
+
+export default function DinosaurCards({ dinosaur }) {
   return (
 
     <Card

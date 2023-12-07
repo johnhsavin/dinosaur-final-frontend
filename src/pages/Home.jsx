@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Image } from 'antd';
 
 
+
 export default function Home() {
   const nav = useNavigate()
   return (

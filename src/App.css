@@ -9,21 +9,19 @@ header {
   text-align: center;
 };
 
-.home-pics {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-between;
-  border: 5px solid #5B5E42;
-  background-color: #373715;
-};
 
-.home-pics div {
-  margin: 10px;
+#dinoListHeader h1 {
+  color: #333;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1em 0;
+  text-align: center;
 }
 
-.add-dinosaur-modal {
-  background-color: #34431c !important;
-;}
+
+
+
+
 
 footer {
   display: flex;

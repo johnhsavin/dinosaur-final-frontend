@@ -5,7 +5,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
   const [form] = Form.useForm();
 
   return (
-    <Modal className='.add-dinosaur-modal'
+    <Modal
       open={open}
       title="Add a new dinosaur"
       okText="New Discovery"
@@ -24,7 +24,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
           });
       }}
     >
-      <Form className='add-dinosaur-form'
+      <Form 
         form={form}
         layout="vertical"
         name="form_in_modal"
@@ -38,7 +38,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
           rules={[
             {
               required: true,
-              message: 'Please enter the dinosaur name!',
+              message: 'Please enter a dinosaur name!',
             },
           ]}
         >
@@ -53,7 +53,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
           </Radio.Group>
         </Form.Item>
 
-        <Form.Item label="Diet" name='diet'>
+        <Form.Item label="Diet" name='diet' required>
           <Radio.Group name='diet' className='diet-type'>
             <Radio.Button value="carnivore">Carnivore</Radio.Button>
             <Radio.Button value="herbivore">Herbivore</Radio.Button>
@@ -99,7 +99,7 @@ export default function AddDinosaurs() {
       .catch(err => console.error(err));
 
     setOpen(false);
-     window.location.reload()
+    window.location.reload()
   };
 
   return (
