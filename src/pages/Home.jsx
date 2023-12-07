@@ -10,7 +10,7 @@ export default function Home() {
     <>
     <Divider></Divider>
     <p className='homeDivider'>
-      Roar into Adventure:
+      Roar into Adventure!
        Join the Young Dino Hunters Trio on a Prehistoric Quest! Journey with Our Explorers as they Unleash the Thrill of the Dig and Dinosaur Discovery.
       </p>
     <Divider></Divider>

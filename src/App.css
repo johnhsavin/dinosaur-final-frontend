@@ -10,6 +10,27 @@ header {
   text-align: center;
 }
 
+body {
+  margin: 0; /* Remove default body margin */
+}
+
+.home-pics {
+  display: flex;
+  justify-content: space-between; /* Adjust as needed */
+}
+
+.home-pics > div {
+  flex: 1;
+  margin-right: 10px; /* Adjust as needed */
+}
+
+/* Make images responsive and fill the container width */
+.home-pics img {
+  width: 50%;
+  height: auto;
+}
+
+
 .homeDivider {
   margin-left: 50px;
   margin-right: 50px;
@@ -38,6 +59,15 @@ main {
   background-color: #34431c;
 }
 
+.dino-divider {
+  color: #f2cb8a;
+  font-size: 2em;
+  font-family: fantasy;
+
+  margin: auto;
+  text-align: center;
+}
+
 #dinoListHeader h1 {
   color: #f2cb8a;
   font-size: 2em;
@@ -47,10 +77,18 @@ main {
   text-align: center;
 }
 
+.button-container {
+  display: flex;
+  justify-content: flex-end; 
+  margin-bottom: 16px;
+}
+
 #dinoCards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+
+
 
 }
 

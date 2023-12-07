@@ -10,6 +10,7 @@ export default function DinosaurCards({ dinosaur }) {
       hoverable
       style={{
         width: 400,
+        marginBottom: 16,
       }}
       cover={<img alt="dinosaurs" src={dinosaur.imageUrl} />}
     >

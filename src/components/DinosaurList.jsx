@@ -28,28 +28,19 @@ export default function DinosaurList({ environment }) {
 
   return (
     <>
-    <Divider></Divider>
+    <Divider className='dino-divider'>{dinoEnvironments[environment]} Dinosaur Dig Site</Divider>
     <main>
     <body id='dinoListHeader'>
       <h1>{dinoEnvironments[environment]} Dinosaur Dig Site</h1>
       </body>
+      <AddDinosaurs open={open} setOpen={setOpen}/>
       <body id='dinoCards'>
-      <AddDinosaurs />
       {dinosaurs && dinosaurs.map((dinosaur) =>
         <DinosaurCards dinosaur={dinosaur} />
-        )};
+        )}
     </body>
         </main>
         </>
   )
 }
 
-// <Card
-//   hoverable
-//   style={{
-//     width: 400,
-//   }}
-//   cover={<img alt="dinosaurs" src={dinosaur.imageUrl}/>}
-// >
-//   <Meta title={dinosaur.name} description={dinosaur.description} />
-// </Card>

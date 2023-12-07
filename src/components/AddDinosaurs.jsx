@@ -81,8 +81,8 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
   );
 };
 
-export default function AddDinosaurs() {
-  const [open, setOpen] = useState(false);
+export default function AddDinosaurs({open, setOpen}) {
+
 
   const onCreate = (values) => {
     console.log('Received values of form: ', values);
@@ -99,11 +99,11 @@ export default function AddDinosaurs() {
       .catch(err => console.error(err));
 
     setOpen(false);
-    window.location.reload()
+    
   };
 
   return (
-    <div>
+    <div className='button-container'>
       <Button
         type="primary"
         onClick={() => {
