@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Card } from 'antd';
 import AddDinosaurs from './AddDinosaurs';
+import DinosaurCards from './DinosaurCards';
 
 
 const { Meta } = Card;
@@ -30,15 +31,16 @@ console.log(dinosaurs)
       <h1>{dinoEnvironments[environment]} Dinosaur Dig Site</h1>
       <AddDinosaurs />
       {dinosaurs && dinosaurs.map((dinosaur) =>
-        <Card
-          hoverable
-          style={{
-            width: 400,
-          }}
-          cover={<img alt="dinosaurs" src={dinosaur.imageUrl}/>}
-        >
-          <Meta title={dinosaur.name} description={dinosaur.description} />
-        </Card>
+      <DinosaurCards dinosaur={dinosaur}/>
+        // <Card
+        //   hoverable
+        //   style={{
+        //     width: 400,
+        //   }}
+        //   cover={<img alt="dinosaurs" src={dinosaur.imageUrl}/>}
+        // >
+        //   <Meta title={dinosaur.name} description={dinosaur.description} />
+        // </Card>
 
       )};   
    </section>

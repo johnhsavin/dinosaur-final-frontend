@@ -99,7 +99,7 @@ export default function AddDinosaurs() {
       .catch(err => console.error(err));
 
     setOpen(false);
-    // window.location.reload()
+     window.location.reload()
   };
 
   return (
