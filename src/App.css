@@ -1,10 +1,10 @@
 header {
   margin: auto;
   border: 5px solid #6d8455;
-  border-radius: 30px;
+
   font-size: 50px;
   font-family: fantasy;
-  color: rgb(103, 13, 13);
+  color: #f2cb8a;
   background-color: #34431c;
   justify-content: center;
   text-align: center;
@@ -25,7 +25,11 @@ header {
   text-align: center;
   font-family: fantasy;
   font-size: 35px;
+}
 
+.home-pics {
+  display: flex;
+  justify-content: center;
 }
 
 

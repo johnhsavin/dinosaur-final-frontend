@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Card } from 'antd';
+import { Card, Divider } from 'antd';
 import AddDinosaurs from './AddDinosaurs';
 import DinosaurCards from './DinosaurCards';
 
@@ -27,17 +27,20 @@ export default function DinosaurList({ environment }) {
   }, [environment, open])
 
   return (
+    <>
+    <Divider></Divider>
     <main>
-    <section id='dinoListHeader'>
+    <body id='dinoListHeader'>
       <h1>{dinoEnvironments[environment]} Dinosaur Dig Site</h1>
-      </section>
-      <section id='dinoCards'>
+      </body>
+      <body id='dinoCards'>
       <AddDinosaurs />
       {dinosaurs && dinosaurs.map((dinosaur) =>
         <DinosaurCards dinosaur={dinosaur} />
         )};
-    </section>
+    </body>
         </main>
+        </>
   )
 }
 
