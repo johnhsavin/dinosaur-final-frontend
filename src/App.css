@@ -1,7 +1,5 @@
 header {
   margin: auto;
-  border: 5px solid #6d8455;
-
   font-size: 50px;
   font-family: fantasy;
   color: #f2cb8a;
@@ -9,6 +7,30 @@ header {
   justify-content: center;
   text-align: center;
 }
+
+.home-pics div {
+  position: relative;
+}
+
+.home-pics div::after {
+  content: attr(alt); /* Use alt attribute as the content for the tooltip */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust background color as needed */
+  color: #fff; /* Adjust text color as needed */
+  padding: 8px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.home-pics div:hover::after {
+  opacity: 1;
+}
+
 
 body {
   margin: 0; /* Remove default body margin */
@@ -30,6 +52,9 @@ body {
   height: auto;
 }
 
+Divider { 
+  color: rgb(103, 13, 13);
+}
 
 .homeDivider {
   margin-left: 50px;
@@ -61,7 +86,7 @@ main {
 
 .dino-divider {
   color: #f2cb8a;
-  font-size: 2em;
+  font-size: 20px;
   font-family: fantasy;
 
   margin: auto;
@@ -100,4 +125,5 @@ footer {
   background-color: #ffffff20;
   border-radius: 10px;
   margin-top: 3em;
+  
 }
