@@ -1,26 +1,54 @@
 header {
-  margin: 20px;
+  margin: auto;
   border: 5px solid #6d8455;
+  border-radius: 30px;
   font-size: 50px;
   font-family: fantasy;
-  color: #f2cb8a;
+  color: rgb(103, 13, 13);
   background-color: #34431c;
   justify-content: center;
   text-align: center;
-};
+}
 
-
-#dinoListHeader h1 {
-  color: #333;
-  font-size: 2em;
-  font-weight: bold;
-  margin: 1em 0;
+.homeDivider {
+  margin-left: 50px;
+  margin-right: 50px;
   text-align: center;
+  font-family: fantasy;
+  font-size: 35px;
+  color: rgb(103, 13, 13);
+  font-weight: 300;
+
+}
+
+#homeDividerText {
+  text-align: center;
+  font-family: fantasy;
+  font-size: 35px;
+
 }
 
 
 
+main {
+  background-color: #34431c;
+}
 
+#dinoListHeader h1 {
+  color: #f2cb8a;
+  font-size: 2em;
+  font-family: fantasy;
+
+  margin: auto;
+  text-align: center;
+}
+
+#dinoCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
 
 
 footer {

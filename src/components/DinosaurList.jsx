@@ -27,7 +27,7 @@ export default function DinosaurList({ environment }) {
   }, [environment, open])
 
   return (
-    <>
+    <main>
     <section id='dinoListHeader'>
       <h1>{dinoEnvironments[environment]} Dinosaur Dig Site</h1>
       </section>
@@ -37,7 +37,7 @@ export default function DinosaurList({ environment }) {
         <DinosaurCards dinosaur={dinosaur} />
         )};
     </section>
-        </>
+        </main>
   )
 }
 
