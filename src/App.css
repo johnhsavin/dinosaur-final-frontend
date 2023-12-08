@@ -9,26 +9,7 @@ header {
 }
 
 .home-pics div {
-  position: relative;
-}
-
-.home-pics div::after {
-  content: attr(alt); /* Use alt attribute as the content for the tooltip */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Adjust background color as needed */
-  color: #fff; /* Adjust text color as needed */
-  padding: 8px;
-  text-align: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.home-pics div:hover::after {
-  opacity: 1;
+  
 }
 
 
@@ -44,6 +25,7 @@ body {
 .home-pics > div {
   flex: 1;
   margin-right: 10px; /* Adjust as needed */
+  position: relative;
 }
 
 /* Make images responsive and fill the container width */
