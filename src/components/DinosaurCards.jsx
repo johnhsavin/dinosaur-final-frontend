@@ -14,7 +14,7 @@ export default function DinosaurCards({ dinosaur }) {
       }}
       cover={<img alt="dinosaurs" src={dinosaur.imageUrl} />}
     >
-      <Meta title={dinosaur.name} description={dinosaur.description} />
+      <Meta title={dinosaur.name} diet={dinosaur.diet} description={dinosaur.description} />
     </Card>
   )
 }
