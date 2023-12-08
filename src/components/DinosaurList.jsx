@@ -4,8 +4,6 @@ import { Card, Divider } from 'antd';
 import AddDinosaurs from './AddDinosaurs';
 import DinosaurCards from './DinosaurCards';
 
-
-
 const { Meta } = Card;
 
 const dinoEnvironments = {

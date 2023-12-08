@@ -11,19 +11,22 @@ export default function Home() {
     <>
       <Divider style={{ borderColor: 'rgb(103, 13, 13)' }}></Divider>
       <p className='homeDivider'>
-        Roar into Adventure!
-        Join the Young Dino Hunters Trio on a Prehistoric Quest! Journey with Our Explorers as they Unleash the Thrill of the Dig and Dinosaur Discovery.
+        Join Rex, Rappy, Rizzo and friends on a Prehistoric Quest! <br /> Journey with Our Explorers as they Unleash the Thrill of the Dig and Dinosaur Discovery.
       </p>
       <Divider style={{ borderColor: 'rgb(103, 13, 13)' }}></Divider>
 
       <body>
         <section className='home-pics'>
-          <div onClick={() => { nav('/land') }}>
-            <Image
+          <div className='image-container' onClick={() => { nav('/land') }}>
+            {/* <Image
               className='dino-img'
               width={width}
               src="/trex.jpg" alt="Land Dinosaurs"
-            />
+              
+            /> */}
+            <img className='dino-img' 
+            width={width} src="/trex.jpg" alt="Land Dinosaurs" />
+            <div class="overlay"> Land</div>
           </div>
 
           <div onClick={() => { nav('/sea') }}>
@@ -31,12 +34,14 @@ export default function Home() {
               className=''
               width={width} src="/mosaurus.png" alt="Water Dinosaurs"
             />
+            <div class="overlay"> Sea</div>
           </div>
 
           <div onClick={() => { nav('/air') }}>
             <Image
               width={width} src="/pterodactyl.png" alt="Air Dinosaurs" />
           </div>
+          <div class="overlay"> Air</div>
         </section>
       </body>
     </>

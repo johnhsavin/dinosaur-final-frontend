@@ -2,16 +2,30 @@ header {
   margin: auto;
   font-size: 50px;
   font-family: fantasy;
-  color: #f2cb8a;
+  color: #f2cb8a; 
   background-color: #34431c;
   justify-content: center;
   text-align: center;
 }
 
-.home-pics div {
-  
+.header-with-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://blog-app-jhs.s3.amazonaws.com/dino+header.jpg'); /* Replace with the path to your background image */
+  background-size: cover; 
+  background-position: auto;
+  background-repeat: no-repeat;
+  color: #f2cb8a;
+  text-align: center; 
+  padding: 20px; 
+  height: 100vh;
 }
 
+.header-text{
+font-size: 140px;
+}
+
+.header-paragraph{
+  font-size: 95px;
+}
 
 body {
   margin: 0; /* Remove default body margin */
@@ -19,24 +33,26 @@ body {
 
 .home-pics {
   display: flex;
-  justify-content: space-between; /* Adjust as needed */
+  justify-content: space-between; 
+  /* margin-left: 10px; */
 }
 
 .home-pics > div {
   flex: 1;
-  margin-right: 10px; /* Adjust as needed */
+  margin-left: 10px;
+  margin-right: 10px; 
   position: relative;
 }
 
 /* Make images responsive and fill the container width */
 .home-pics img {
-  width: 50%;
+  width: 40%;
   height: auto;
 }
 
-Divider { 
-  color: rgb(103, 13, 13);
-}
+/* Divider { 
+  color: #f2cb8a;
+} */
 
 .homeDivider {
   margin-left: 50px;
@@ -44,7 +60,7 @@ Divider {
   text-align: center;
   font-family: fantasy;
   font-size: 35px;
-  color: rgb(103, 13, 13);
+  color: #f2cb8a;
   font-weight: 300;
 
 }
@@ -58,6 +74,10 @@ Divider {
 .home-pics {
   display: flex;
   justify-content: center;
+}
+
+.dino-img{
+  border: 1px red solid;
 }
 
 
@@ -108,4 +128,37 @@ footer {
   border-radius: 10px;
   margin-top: 3em;
   
+}
+
+
+
+
+
+
+
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and transparency */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
 }
