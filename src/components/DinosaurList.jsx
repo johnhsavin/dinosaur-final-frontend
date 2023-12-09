@@ -26,7 +26,7 @@ export default function DinosaurList({ environment }) {
 
   return (
     <>
-    <Divider className='dino-divider'>{dinoEnvironments[environment]} Dinosaur Dig Site</Divider>
+    <Divider> </Divider>
     <main>
     <body id='dinoListHeader'>
       <h1>{dinoEnvironments[environment]} Dinosaur Dig Site</h1>

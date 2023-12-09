@@ -17,31 +17,32 @@ export default function Home() {
 
       <body>
         <section className='home-pics'>
-          <div className='image-container' onClick={() => { nav('/land') }}>
-            {/* <Image
+          {/* <Image
               className='dino-img'
               width={width}
               src="/trex.jpg" alt="Land Dinosaurs"
-              
             /> */}
-            <img className='dino-img' 
-            width={width} src="/trex.jpg" alt="Land Dinosaurs" />
+
+          <div className='image-container' onClick={() => { nav('/land') }}>
+            <Image
+              width={width}
+              src="/trex.jpg" alt="Land Dinosaurs" />
             <div class="overlay"> Land</div>
           </div>
 
-          <div onClick={() => { nav('/sea') }}>
+          <div className='image-container' onClick={() => { nav('/sea') }}>
             <Image
-              className=''
-              width={width} src="/mosaurus.png" alt="Water Dinosaurs"
-            />
+              width={width} 
+              src="/mosaurus.png" alt="Water Dinosaurs"/>
             <div class="overlay"> Sea</div>
           </div>
 
-          <div onClick={() => { nav('/air') }}>
+          <div className='image-container' onClick={() => { nav('/air') }}>
             <Image
-              width={width} src="/pterodactyl.png" alt="Air Dinosaurs" />
-          </div>
+              width={width} 
+              src="/pterodactyl.png" alt="Air Dinosaurs" />
           <div class="overlay"> Air</div>
+          </div>
         </section>
       </body>
     </>
