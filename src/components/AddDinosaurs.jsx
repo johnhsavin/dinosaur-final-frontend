@@ -104,7 +104,7 @@ export default function AddDinosaurs({open, setOpen}) {
 
   return (
     <div className='button-container'>
-      <Button
+      <Button className='addDinoButton'
         type="primary"
         onClick={() => {
           setOpen(true);

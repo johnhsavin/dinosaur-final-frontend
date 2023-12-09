@@ -3,7 +3,7 @@ header {
   font-size: 50px;
   font-family: fantasy;
   color: #f2cb8a; 
-  background-color: #34431c;
+  background-color: #587726;
   justify-content: center;
   text-align: center;
 }
@@ -76,12 +76,6 @@ body {
   justify-content: center;
 }
 
-.dino-img{
-  border: 1px red solid;
-}
-
-
-
 main {
   background-color: #34431c;
 }
@@ -110,15 +104,24 @@ main {
   margin-bottom: 16px;
 }
 
+.addDinoButton{
+  /* border: 3px solid rgb(103, 13, 13); */
+  background-color: rgb(103, 13, 13);
+  color: #f2cb8a;
+  font-weight: bold;
+  font-family: fantasy;
+  
+}
+
+.dinoListTitle {
+  margin-top: 45px;
+}
+
 #dinoCards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
-
-
 }
-
 
 footer {
   display: flex;
@@ -130,13 +133,6 @@ footer {
   
 }
 
-
-
-
-
-
-
-
 .image-container {
   position: relative;
   overflow: hidden;
@@ -145,16 +141,22 @@ footer {
 .image-container img {
   width: 100%;
   height: auto;
+  border: 3px solid rgb(103, 13, 13);
   display: block;
 }
 
 .overlay {
   position: absolute;
+  text-align: center;
+  font-size: 50px;
+  color: #f2cb8a;
+  font-family: fantasy;
+  font-weight: bold;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and transparency */
+  background: rgba(206, 215, 208, 0.306); /* Adjust the overlay color and transparency */
   opacity: 0;
   transition: opacity 0.3s ease; /* Add a smooth transition effect */
 }

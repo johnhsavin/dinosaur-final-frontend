@@ -29,8 +29,9 @@ export default function DinosaurList({ environment }) {
     <Divider> </Divider>
     <main>
     <body id='dinoListHeader'>
-      <h1>{dinoEnvironments[environment]} Dinosaur Dig Site</h1>
+      <h1 className='dinoListTitle'>{dinoEnvironments[environment]} Dinosaur Dig Site</h1>
       </body>
+      <br />
       <AddDinosaurs open={open} setOpen={setOpen}/>
       <body id='dinoCards'>
       {dinosaurs && dinosaurs.map((dinosaur) =>
