@@ -2,49 +2,50 @@ header {
   margin: auto;
   font-size: 50px;
   font-family: fantasy;
-  color: #f2cb8a; 
+  color: #f2cb8a;
   background-color: #587726;
   justify-content: center;
   text-align: center;
 }
 
 .header-with-background {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://blog-app-jhs.s3.amazonaws.com/dino+header.jpg'); /* Replace with the path to your background image */
-  background-size: cover; 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://blog-app-jhs.s3.amazonaws.com/dino+header.jpg');
+  /* Replace with the path to your background image */
+  background-size: cover;
   background-position: auto;
   background-repeat: no-repeat;
   color: #f2cb8a;
-  text-align: center; 
-  padding: 20px; 
+  text-align: center;
+  padding: 20px;
   height: 100vh;
 }
 
-.header-text{
-font-size: 140px;
+.header-text {
+  font-size: 140px;
 }
 
-.header-paragraph{
+.header-paragraph {
   font-size: 95px;
 }
 
 body {
-  margin: 0; /* Remove default body margin */
+  margin: 0;
 }
 
 .home-pics {
   display: flex;
-  justify-content: space-between; 
-  /* margin-left: 10px; */
+  justify-content: space-between;
+  margin-left: 10px;
 }
 
-.home-pics > div {
+.home-pics>div {
   flex: 1;
   margin-left: 10px;
-  margin-right: 10px; 
+  margin-right: 10px;
   position: relative;
 }
 
-/* Make images responsive and fill the container width */
+
 .home-pics img {
   width: 40%;
   height: auto;
@@ -100,17 +101,17 @@ main {
 
 .button-container {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   margin-bottom: 16px;
 }
 
-.addDinoButton{
+.addDinoButton {
   /* border: 3px solid rgb(103, 13, 13); */
   background-color: rgb(103, 13, 13);
   color: #f2cb8a;
   font-weight: bold;
   font-family: fantasy;
-  
+
 }
 
 .dinoListTitle {
@@ -130,7 +131,7 @@ footer {
   background-color: #ffffff20;
   border-radius: 10px;
   margin-top: 3em;
-  
+
 }
 
 .image-container {
@@ -142,23 +143,27 @@ footer {
   width: 100%;
   height: auto;
   border: 3px solid rgb(103, 13, 13);
-  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .overlay {
   position: absolute;
   text-align: center;
-  font-size: 50px;
-  color: #f2cb8a;
+  font-size: 70px;
+  color: red;
   font-family: fantasy;
   font-weight: bold;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(206, 215, 208, 0.306); /* Adjust the overlay color and transparency */
+  background: rgba(117, 118, 117, 0.306);
+  padding-top: 28%;
   opacity: 0;
-  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+  transition: opacity 0.3s ease;
+  
 }
 
 .image-container:hover .overlay {
