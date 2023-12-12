@@ -12,7 +12,7 @@ export default function DinosaurCards({ dinosaur }) {
         width: 460,
         marginBottom: 16,
       }}
-      cover={<img alt="dinosaurs" src={dinosaur.imageUrl} />}
+      cover={<img alt="dinosaurs" onError={e => e.target.src="https://blog-app-jhs.s3.amazonaws.com/BocaCodeasaurusfunny.jpg"} src={dinosaur.imageUrl} />}
     >
       <Meta title={dinosaur.name} />
       <p>{dinosaur.diet}</p>
