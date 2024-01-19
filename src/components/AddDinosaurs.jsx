@@ -73,7 +73,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
           <Input />
         </Form.Item>
 
-        <Form.Item name="description" label="Description">
+        <Form.Item name="description" label="Description" required>
           <Input.TextArea placeholder='A brief description of your dinosaur!' />
         </Form.Item>
       </Form>

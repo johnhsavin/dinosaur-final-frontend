@@ -11,7 +11,10 @@ export default function Home() {
     <>
       <Divider style={{ borderColor: 'rgb(103, 13, 13)' }}></Divider>
       <p className='homeDivider'>
-        Join Rex, Rappy, Rizzo and friends on a Prehistoric Quest! <br /> Journey with Our Explorers for an Epic Thrill of Dinosaur Discovery.
+        Join Rex, Rappy, Rizzo and friends on a Prehistoric Quest! 
+      </p>
+      <p className='homeDivider'>
+       Journey with Our Explorers for an Epic Thrill of Dinosaur Discovery.
       </p>
       <Divider style={{ borderColor: 'rgb(103, 13, 13)' }}></Divider>
 
