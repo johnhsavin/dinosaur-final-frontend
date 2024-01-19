@@ -45,7 +45,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
           <Input />
         </Form.Item>
 
-        <Form.Item label="Environment" name='environment'>
+        <Form.Item label="Environment" name='environment' required>
           <Radio.Group name='environment' className='environment-type'>
             <Radio.Button value="land">Land</Radio.Button>
             <Radio.Button value="sea">Sea</Radio.Button>

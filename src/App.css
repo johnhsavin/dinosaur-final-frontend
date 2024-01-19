@@ -12,7 +12,7 @@ header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://blog-app-jhs.s3.amazonaws.com/dino+header.jpg');
   /* Replace with the path to your background image */
   background-size: cover;
-  background-position: auto;
+  background-position: center center;
   background-repeat: no-repeat;
   color: #f2cb8a;
   text-align: center;
@@ -21,11 +21,13 @@ header {
 }
 
 .header-text {
-  font-size: 140px;
+  font-size: calc(1.6em + 1.6vw);
+  line-height: 0.9;
 }
 
 .header-paragraph {
-  font-size: 95px;
+  font-size: calc(1em + 1vw);
+  line-height: 1.1;
 }
 
 body {
@@ -35,6 +37,7 @@ body {
 .home-pics {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-left: 10px;
 }
 
@@ -56,26 +59,60 @@ body {
 } */
 
 .homeDivider {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 4%;
+  margin-right: 4%;
   text-align: center;
   font-family: fantasy;
-  font-size: 35px;
+  font-size: 1.6em;
   color: #f2cb8a;
   font-weight: 300;
 
-}
-
-#homeDividerText {
-  text-align: center;
-  font-family: fantasy;
-  font-size: 35px;
 }
 
 .home-pics {
   display: flex;
   justify-content: center;
 }
+
+
+.image-container {
+  position: relative;
+  min-width: 220px;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border: 3px solid rgb(103, 13, 13);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  text-align: center;
+  font-size: 70px;
+  color: #f2cb8a;
+  font-family: fantasy;
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(39, 39, 39, 0.706);
+  padding-top: 28%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
 
 main {
   background-color: #34431c;
@@ -132,40 +169,4 @@ footer {
   border-radius: 10px;
   margin-top: 3em;
 
-}
-
-.image-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  border: 3px solid rgb(103, 13, 13);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.overlay {
-  position: absolute;
-  text-align: center;
-  font-size: 70px;
-  color: #f2cb8a;
-  font-family: fantasy;
-  font-weight: bold;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(39, 39, 39, 0.706);
-  padding-top: 28%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  
-}
-
-.image-container:hover .overlay {
-  opacity: 1;
 }
